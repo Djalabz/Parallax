@@ -1,0 +1,475 @@
+
+/* // FONTS // */
+
+@font-face {
+    font-family: cyberpunk;
+    src: url(./assets/fonts/cyberdyne/cyberdyne.ttf);
+  }
+
+@font-face {
+    font-family: cyber2;
+    src: url(./assets/fonts/cyberdyne/cyberdynecond.ttf);
+}
+
+@font-face {
+    font-family: arcade;
+    src: url(./assets/fonts/ArcadeClassic.ttf);
+}
+
+@font-face {
+    font-family: pixel;
+    src: url(./assets/fonts/pixel/Pixel\ Tandy.otf);
+}
+
+@font-face {
+    font-family: open-sans;
+    src: url(./assets/fonts/OpenSans-VariableFont_wdth.ttf);
+}
+
+
+body {
+    /* background: linear-gradient(#e66465, #003088, #9198e5); */
+    /* background: linear-gradient(#FC695C, #251A57, #65C7EB); */
+    background: linear-gradient(.5turn,#F0534D, #6F489E, #65C7EB);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    color: white;
+    font-family: open-sans;
+}
+
+html {
+	scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top:0;
+    z-index: 99;
+}
+
+
+/* NAVBAR  */
+
+
+.navBtn {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    top: 1.8rem;
+    left: 3rem;
+    border-radius: 100%;
+    border: solid 4px white;
+    background-color: darkred;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.glow-wrapper {
+    display: none;
+    width: 36px;
+    height: 40px;
+    position: relative;
+    border-radius: 100%;
+    top: 3.2rem;
+    left: 3rem;
+    transform: rotate(240deg);
+    animation: move-glow 0.8s forwards;
+    animation-direction: normal;
+    z-index: -2;
+    transition: ease-in-out;
+    margin-top: -6px;
+}
+
+@keyframes move-glow {
+    from {
+      transform: rotate(240deg);
+    }
+    
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes move-glow2 {
+    from {
+      transform: rotate(360deg);
+    }
+    
+    to {
+      transform: rotate(240deg);
+    }
+  }
+
+.glow {
+    /* cursor: pointer; */
+    position: fixed;
+    top: 1.5rem;
+    border-radius: 100%;
+    width: 12px;
+    height: 12px;
+    background-color: darkred;
+    z-index: 99;
+    border: solid 2px white;
+    left: 2.1rem;
+    animation: pulseGlow 1.2s linear forwards;
+    transition: ease-in-out 0.3s;
+}
+
+@keyframes pulseGlow {
+    0% {width: 14px; height: 14px; background-color: darkred;}
+    55% {width: 16px; height: 16px; background-color: darkorange;}
+    100% {width: 13px; height: 13px; background-color: orange;};
+}
+
+
+.outGlow {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: darkorange;
+}
+
+ul {
+    list-style-type: none;
+    margin-left: 5.5rem;
+    margin-top: 0rem;
+}
+
+.menu-list {
+    display: none;
+    transition: ease-in-out 0.5s;
+    animation: fadeInNav;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadeInNav {
+    0% {opacity: 0; margin-left: 0rem;}
+    60% {opacity: 20%; margin-left: 3.3;}
+    100% {opacity: 1; margin-left: 5.5rem;}
+}
+
+@keyframes fadeOutNav {
+    0% {opacity: 1; margin-left: 5.5rem;}
+    60% {opacity: 20%;}
+    100% {opacity: 0; margin-left: 0rem;}
+
+
+}
+
+.open {
+    display: flex;    
+}
+
+.close {
+    animation-name: fadeOutNav;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+li {
+    margin-right: 1rem;
+}
+
+a {
+    font-family: open-sans;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+/* CONTAINER AND BLOCK  */
+
+
+.container {
+    text-align: center;
+    width: 100%;
+    height: 600px;
+    margin: auto;
+    margin-bottom: 8rem;
+    margin-top: 7rem;
+}
+
+.sun {
+    border-radius: 100%;
+    margin-top: 0.7rem;
+    background: linear-gradient(to bottom, orange, salmon);
+    max-width: 60px;
+    height: 60px;
+    margin-left: 72%;
+    box-shadow: 0rem 0rem 4rem darkorange;
+}
+
+.block2 {
+    margin-top: 6.2rem;
+    background: linear-gradient(to bottom, darkred, transparent);
+    min-width: 100%;
+    height: 280px;
+    display: none;
+    z-index: -5;
+}
+
+.title {
+    font-family: open-sans;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    transition: margin-top 0.3s;
+    display: block;
+}
+
+.title.main {
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    position: fixed;
+    top: 12rem;
+}
+
+.space {
+    width: 2rem;
+}
+
+
+
+/* PORTFOLIO */
+
+
+
+#portfolio {
+    margin-top: 45rem;
+}
+
+
+
+.card {
+    background-color: white;
+    margin: 5rem auto;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+    top:5rem;
+}
+
+@keyframes fadeInCard {
+    0% {opacity: 0;}
+    100% {opacity: 0.6;}
+}
+
+/* .card:hover, .arrow:hover {
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    opacity: 1;
+} */
+
+.card.current {
+    width: 200px;
+    height: 200px;
+    margin-top: 6rem;
+    left: 300px;
+    top: 0rem;
+    opacity: 1;
+    display: block;
+    transition-property: width, height, left, top, opacity;
+    transition-duration: 0.3s;
+}
+
+
+.card.current>.title {
+    margin-top: 7.5rem;
+}
+
+.card.prev, .card.next {
+    opacity: 60%;
+    width: 120px;
+    height: 120px;
+    display: block;
+    transition-property: width, height, left, top, opacity;
+    transition-duration: 0.3s;
+    animation-name: fadeInCard;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.card.prev {
+    left: 120px;
+}
+
+.card.next {
+    left: 560px;
+}
+
+.arrow {
+    position: absolute;
+    top: 11rem;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.arrow.left {
+    left: 2rem;
+}
+
+.arrow.right {
+    right: 2rem;
+}
+
+.gallery {
+    width: 800px;
+    height: 400px;
+    margin: 4rem auto;
+    position: relative;
+}
+
+
+
+
+/* Contact FORM  */
+
+
+
+
+.contact-form {
+    display: grid;
+    width: 400px;
+    text-align: left;
+    margin: 2rem auto;
+}
+
+label {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+input[type='submit'] {
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    border: solid 2px white;
+    background-color: transparent;
+}
+
+input[type='submit']:hover {
+    background-color: white;
+    color: black;
+}
+
+
+
+
+/* // PARALLAX // */
+
+
+.landscape {
+    width: 100vw;
+}
+
+.landscape>img {
+    position: fixed;
+}
+
+.trees-1 {
+    width: 112vw;
+    left: -1em;
+    bottom: -850px;
+    filter: drop-shadow(-2.5rem 3rem 40px #19113F);
+}
+
+.mountains-1 {
+    width: 130vw;
+    left: 0;
+    bottom: 0;
+    height: 320px;
+}
+
+
+.mountains-2 {
+    width: 100vw;
+    left:-20rem;
+    bottom: 0;
+    height: 280px;
+}
+
+.mountains-3 {
+    width: 140vw;
+    left: -6rem;
+    bottom: 0;
+    height: 470px;
+}
+
+.mountains-4 {
+    width: 140vw;
+    left:0;
+    bottom: 0;
+    height: 380px;
+}
+
+.moon-light {
+    position: fixed;
+    right: 4rem;
+    z-index: -5;
+}
+
+.moon {
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(orange, white);
+    border-radius: 100%;
+    position: fixed;
+    top: 6rem;
+    right: 17rem;
+    z-index: -99;
+}
+
+.cloud {
+    position: fixed;
+    z-index: -98;
+}
+
+.cloud.left1 {
+    left:-18px;
+    width: 17vw;
+}
+
+.cloud.left2 {
+    top: 18rem;
+    left:-10px;
+    width: 20vw;
+}
+
+.cloud.center {
+    left: 140px;
+    top: 13rem;
+    width: 19vw;
+}
+
+.cloud.right1 {
+    right: -14px;
+    width: 22vw;
+    top:12rem;
+}
+
+.cloud.right2 {
+    right: -20px;
+    width: 17vw;
+    top:7rem;
+}
