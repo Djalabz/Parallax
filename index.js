@@ -1,3 +1,4 @@
+
 // Main Title // 
 
 
@@ -31,9 +32,20 @@ const clouds = document.querySelectorAll('.cloud')
 const titleMain = document.getElementsByClassName('title main')[0]
 
 
+// function cloudsIdle() {
+    
+//     let offset = window.scrollY
+
+//     if (offset < 300) {
+//         for (i=0; i<5; i++) {
+//             clouds[i].style.animation = "cloudsIdle 10s forwards";
+//         }
+        
+//     }
+// }
+
 
 function parallaxScroll() {
-    console.log(window.scrollY)
 
     let offset = window.scrollY
 
@@ -46,9 +58,11 @@ function parallaxScroll() {
         mountain2.style.display = 'block';
         mountain3.style.display = 'block';
         mountain4.style.display = 'block';
+
         moon.style.display = 'block';
 
-        tree1.style.bottom = offset - 850 + 'px';
+        tree1.style.top = 440 - offset + 'px';
+
         mountain1.style.bottom = offset * 0.5 + 'px';
         mountain2.style.bottom = offset * 0.35 + 'px';
         mountain3.style.bottom = offset * 0.25 + 'px';
@@ -67,25 +81,27 @@ function parallaxScroll() {
 
         titleMain.style.display = 'none';
 
-        tree1.style.bottom = offset - 850 + 'px';
+        tree1.style.top = 440 - offset + 'px';
 
         mountain1.style.display = 'none';
         mountain2.style.display = 'none';
         mountain3.style.display = 'none';
         mountain4.style.display = 'none';
         moon.style.display = 'none';
-
-        clouds.style.animation = 'fadeOu5 0.5s forwards'
-
-
     } 
 }
 
-document.addEventListener('scroll', parallaxScroll)
+
+
+document.addEventListener('scroll', parallaxScroll);
+// window.addEventListener('load', cloudsIdle);
+
+
 
 
 
 // NAVBAR and BUTTON //
+
 
 
 const navBtn = document.querySelectorAll(".navBtn");
@@ -116,6 +132,7 @@ navBtn[0].addEventListener("click", handleMenu);
 
 
 // GALLERY //
+
 
 
 const allCards = document.querySelectorAll(".card");

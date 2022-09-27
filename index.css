@@ -27,20 +27,26 @@
 }
 
 
+/* VARIABLES CSS  */
+
+
+
+
+
+/* MAIN CSS  */
+
+html {
+	scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
 body {
-    /* background: linear-gradient(#e66465, #003088, #9198e5); */
-    /* background: linear-gradient(#FC695C, #251A57, #65C7EB); */
     background: linear-gradient(.5turn,#F0534D, #6F489E, #65C7EB);
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
     color: white;
     font-family: open-sans;
-}
-
-html {
-	scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
 }
 
 .main {
@@ -379,6 +385,9 @@ input[type='submit']:hover {
 /* // PARALLAX // */
 
 
+/* LANDSCAPE */
+
+
 .landscape {
     width: 100vw;
 }
@@ -390,7 +399,8 @@ input[type='submit']:hover {
 .trees-1 {
     width: 112vw;
     left: -1em;
-    bottom: -850px;
+    bottom: 0px;
+    top: 440px;
     filter: drop-shadow(-2.5rem 3rem 40px #19113F);
 }
 
@@ -436,9 +446,14 @@ input[type='submit']:hover {
     border-radius: 100%;
     position: fixed;
     top: 6rem;
-    right: 17rem;
+    right: 20%;
     z-index: -99;
 }
+
+
+/* CLOUDS  */
+
+
 
 .cloud {
     position: fixed;
@@ -472,4 +487,48 @@ input[type='submit']:hover {
     right: -20px;
     width: 17vw;
     top:7rem;
+}
+
+
+@keyframes cloudsIdle {
+    0% {
+        left: -18px;
+    }
+    50% {
+        left: 400px;
+    }
+    100% {
+        left: 800px;
+    }
+}
+
+
+
+/* MEDIA QUERIES */
+
+
+/* 
+mobile -- width: 360px 
+tablet -- width: 768px
+labtop -- width: 1280px height: 800px
+home -- width: 2048px height: 1152px
+larger -- 2560px 
+*/
+
+@media (min-width: 359px) and (max-width: 767px) {
+
+    #portfolio {
+        width: 320px;
+        display: none;
+    }
+
+    .contact-form {
+        width: 320px;
+    }
+
+    .trees-1 {
+        width: 112vw;
+        left: -1em;
+        filter: drop-shadow(-2.5rem 3rem 40px #19113F);
+    }   
 }
