@@ -21,6 +21,7 @@ var intervalLetters = setInterval(animateLetters, 2000)
 
 
 const tree1 = document.getElementsByClassName('trees-1')[0]
+const treeMobile = document.getElementsByClassName('trees-mobile')[0]
 const mountain1 = document.getElementsByClassName('mountains-1')[0]
 const mountain2 = document.getElementsByClassName('mountains-2')[0]
 const mountain3 = document.getElementsByClassName('mountains-3')[0]
@@ -49,7 +50,9 @@ function parallaxScroll() {
 
     let offset = window.scrollY
 
-    if (offset < 500) {
+    console.log()
+
+    if (offset < 490) {
 
         titleMain.style.display = 'flex';
         titleMain.style.marginTop = offset * 0.4 + 'px'; 
@@ -62,6 +65,7 @@ function parallaxScroll() {
         moon.style.display = 'block';
 
         tree1.style.top = 440 - offset + 'px';
+        treeMobile.style.top = 380 - offset + 'px';
 
         mountain1.style.bottom = offset * 0.5 + 'px';
         mountain2.style.bottom = offset * 0.35 + 'px';
@@ -82,6 +86,7 @@ function parallaxScroll() {
         titleMain.style.display = 'none';
 
         tree1.style.top = 440 - offset + 'px';
+        treeMobile.style.top = 380 - offset + 'px';
 
         mountain1.style.display = 'none';
         mountain2.style.display = 'none';
