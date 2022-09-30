@@ -1,18 +1,17 @@
 
-// Main Title // 
+// MAIN TITLE // 
+
+// const letters = document.getElementsById('title-main')
 
 
-const letters = document.getElementsByClassName('title main')[0].children
+// function animateLetters() {
+//     for (i=0; i<letters.length; i++) {
+//         delay = (i*80).toString();
+//         letters[i].style.animation = 'pulse 0.3s ' + delay + 'ms';
+//     } 
+// }
 
-
-function animateLetters() {
-    for (i=0; i<letters.length; i++) {
-        delay = (i*80).toString();
-        letters[i].style.animation = 'pulse 0.3s ' + delay + 'ms';
-    } 
-}
-
-var intervalLetters = setInterval(animateLetters, 2000)
+// var intervalLetters = setInterval(animateLetters, 2000)
 
 
 
@@ -31,6 +30,16 @@ const moon = document.getElementsByClassName('moon')[0]
 const clouds = document.querySelectorAll('.cloud')
 
 const titleMain = document.getElementsByClassName('title main')[0]
+
+
+   // MAIN TITLE VIVUS DRAWING ANIMATION //
+
+
+new Vivus('title-main', {type: 'delayed', duration: 200},
+    function (obj) {
+        obj.el.classList.add("finished")
+    }
+)
 
 
 // function cloudsIdle() {
@@ -65,7 +74,7 @@ function parallaxScroll() {
         moon.style.display = 'block';
 
         tree1.style.top = 440 - offset + 'px';
-        treeMobile.style.top = 380 - offset + 'px';
+        treeMobile.style.top = 68 - (offset/10) + 'vh';
 
         mountain1.style.bottom = offset * 0.5 + 'px';
         mountain2.style.bottom = offset * 0.35 + 'px';
@@ -86,7 +95,7 @@ function parallaxScroll() {
         titleMain.style.display = 'none';
 
         tree1.style.top = 440 - offset + 'px';
-        treeMobile.style.top = 380 - offset + 'px';
+        treeMobile.style.top = 68 - (offset/10) + 'vh';
 
         mountain1.style.display = 'none';
         mountain2.style.display = 'none';
