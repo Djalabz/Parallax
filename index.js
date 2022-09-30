@@ -35,7 +35,7 @@ const titleMain = document.getElementById('title-main')
    // MAIN TITLE VIVUS DRAWING ANIMATION //
 
 
-new Vivus('title-main', {type: 'delayed', duration: 100},
+new Vivus('title-main', {type: 'delayed', duration: 90},
     function (obj) {
         obj.el.classList.add("finished")
     }
@@ -73,15 +73,15 @@ function parallaxScroll() {
 
         moon.style.display = 'block';
 
-        tree1.style.top = 440 - offset + 'px';
-        treeMobile.style.top = 68 - (offset/10) + 'vh';
+        tree1.style.marginTop = - offset + 'px';
+        treeMobile.style.marginTop = -(offset/10) + 'vh';
 
         mountain1.style.bottom = offset * 0.5 + 'px';
         mountain2.style.bottom = offset * 0.35 + 'px';
         mountain3.style.bottom = offset * 0.25 + 'px';
         mountain4.style.bottom = offset * 0.2 + 'px';
         
-        moon.style.marginTop = offset/4 + 'px';
+        moon.style.marginTop = offset/1.6 + 'px';
 
         clouds[0].style.left = -(offset/2) -18 + 'px' ;
         clouds[1].style.left = -(offset)-10 + 'px' ;
@@ -94,8 +94,8 @@ function parallaxScroll() {
 
         titleMain.style.display = 'none';
 
-        tree1.style.top = 440 - offset + 'px';
-        treeMobile.style.top = 68 - (offset/10) + 'vh';
+        tree1.style.marginTop = - offset + 'px';
+        treeMobile.style.marginTop = -(offset/10) + 'vh';
 
         mountain1.style.display = 'none';
         mountain2.style.display = 'none';

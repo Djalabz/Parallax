@@ -144,17 +144,14 @@ body {
     background-color: darkorange;
 }
 
-ul {
-    list-style-type: none;
-    margin-left: 5.5rem;
-    margin-top: 0rem;
-}
-
 .menu-list {
     display: none;
     transition: ease-in-out 0.5s;
     animation: fadeInNav;
     animation-duration: 0.5s;
+    list-style-type: none;
+    margin-left: 5.5rem;
+    margin-top: 0rem;
 }
 
 @keyframes fadeInNav {
@@ -271,8 +268,6 @@ a:hover {
     fill-opacity: 1;
 }
 
-
-
 .space {
     width: 2rem;
 }
@@ -302,13 +297,6 @@ a:hover {
     0% {opacity: 0;}
     100% {opacity: 0.6;}
 }
-
-/* .card:hover, .arrow:hover {
-    animation-name: pulse;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    opacity: 1;
-} */
 
 .card.current {
     width: 200px;
@@ -425,7 +413,6 @@ input[type='submit']:hover {
 .trees-1 {
     width: 112vw;
     left: -1em;
-    bottom: 0px;
     top: 440px;
     filter: drop-shadow(-2.5rem 3rem 40px #19113F);
 }
@@ -534,7 +521,7 @@ input[type='submit']:hover {
 
 
 
-/* MEDIA QUERIES */
+/* ////////// MEDIA QUERIES ////////// */
 
 
 /* 
@@ -546,14 +533,42 @@ larger -- 2560px
 */
 
 
-@media (min-width: 359px) and (max-width: 767px) {
+@media (min-width: 359px) and (max-width: 768px) {
+
+    .navBtn {
+        top: 2.8vh;
+        left: 5vw;
+    }
+
+    .menu-list {
+        margin-left: 2.2rem;
+    }
+
+    a {
+        font-size: 1rem;
+    }
+
+    @keyframes fadeInNav {
+        0% {opacity: 0; margin-left: 0rem;}
+        60% {opacity: 20%; margin-left: 2rem;}
+        100% {opacity: 1; margin-left: 2.2rem;}
+    }
+    
+    @keyframes fadeOutNav {
+        0% {opacity: 1; margin-left: 2.2rem;}
+        60% {opacity: 20%;}
+        100% {opacity: 0; margin-left: 0rem;}
+    
+    
+    }
 
     .title {
         font-size: 2rem;
     }
 
-    .title.main {
-        top: 10rem;
+    #title-main {
+        left: 7vw;
+        width: 86vw;
     }
 
     #portfolio {
@@ -566,8 +581,8 @@ larger -- 2560px
     }
 
     .moon {
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 2.7rem;
+        height: 2.7rem;
     }
 
     .cloud.center {
@@ -607,5 +622,49 @@ larger -- 2560px
     .mountains-4 {
         height: 540px;
         left: -0rem;
+    }
+}
+
+
+@media (min-width: 359px) and (max-width: 768px) and (min-height: 630px) {
+    #title-main {
+        top: 5vh;
+    }
+
+    .mountains-1 {
+        height: 330px;
+    }
+
+    .mountains-2 {
+        height: 300px;
+        left: -7rem;
+    }
+
+    .mountains-3 {
+        height: 430px;
+        left: 0rem;
+        width: 120vw;
+    }
+
+    .mountains-4 {
+        height: 370px;
+        left: -0rem;
+    }
+}
+
+@media (min-width: 359px) and (max-width: 768px) and (min-height: 741px) and (max-height: 840px) {
+    .trees-mobile {
+        top: 72vh;
+    }
+}
+
+@media (min-width: 359px) and (max-width: 768px) and (min-height: 841px) and (max-height: 1040px) {
+
+    #title-main {
+        top: 10vh
+    }
+
+    .trees-mobile {
+        top: 76vh;
     }
 }
