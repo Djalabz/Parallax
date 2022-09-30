@@ -29,13 +29,13 @@ const mountain4 = document.getElementsByClassName('mountains-4')[0]
 const moon = document.getElementsByClassName('moon')[0]
 const clouds = document.querySelectorAll('.cloud')
 
-const titleMain = document.getElementsByClassName('title main')[0]
+const titleMain = document.getElementById('title-main')
 
 
    // MAIN TITLE VIVUS DRAWING ANIMATION //
 
 
-new Vivus('title-main', {type: 'delayed', duration: 200},
+new Vivus('title-main', {type: 'delayed', duration: 100},
     function (obj) {
         obj.el.classList.add("finished")
     }
