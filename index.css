@@ -373,6 +373,15 @@ a:hover {
     margin: 2rem auto;
 }
 
+
+.contact-form input, select, textarea {
+    border: none;
+    border-radius: 6px;
+    height: 1.4rem;
+}
+
+
+
 label {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
@@ -385,6 +394,7 @@ input[type='submit'] {
     margin-top: 2rem;
     border: solid 2px white;
     background-color: transparent;
+    height: 1.8rem;
 }
 
 input[type='submit']:hover {
