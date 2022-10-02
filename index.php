@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,27 +118,24 @@
                 <div class="title">About</div>
             </section>
 
-            
-
             <section id="contact" class="container">
                 <div class="title">Contact</div>
 
-                <form action="" class="contact-form">
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <?php include './php/contact-form.php';?>
+                <?php echo $message_sent?>
+
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="John Doe">
                 
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                
-                    <label for="country">Country</label>
-                    <select id="country" name="country">
-                        <option value="australia">Australia</option>
-                        <option value="canada">Canada</option>
-                        <option value="usa">USA</option>
-                    </select>
-                
+                    <label for="email">Email</label>
+                    <input type="text" id="lname" name="lastname" placeholder="example@gmail.com">
+
                     <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    <input type="text" id="subject" name="subject" placeholder="Great app project ! Needs U">
+                
+                    <label for="message">Your message</label>
+                    <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
                 
                     <input type="submit" value="Submit">
                 </form>
