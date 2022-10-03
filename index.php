@@ -12,6 +12,7 @@
 
     <script type="text/javascript" src="./index.js" defer></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/vivus/0.2.1/vivus.min.js"></script>
+    
 
     <title>Parallax Portfolio</title>
     
@@ -118,29 +119,30 @@
                 <div class="title">About</div>
             </section>
 
+
+
             <section id="contact" class="container">
                 <div class="title">Contact</div>
 
                 <?php include './php/contact-form.php';?>
-                <?php echo $message_sent?>
 
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" class="contact-form">
+                <form method="POST" class="contact-form">
                     <label for="name">Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="John Doe">
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
                 
                     <label for="email">Email</label>
-                    <input type="text" id="lname" name="lastname" placeholder="example@gmail.com">
+                    <input type="emeil" id="email" name="email" placeholder="example@gmail.com" required>
 
                     <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" placeholder="Great app project ! Needs U">
+                    <input type="text" id="subject" name="subject" placeholder="Great app project ! Needs U" required>
                 
                     <label for="message">Your message</label>
-                    <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+                    <textarea id="message" name="message" placeholder="Write something.." style="height:200px" required></textarea>
                 
                     <input type="submit" value="Submit">
                 </form>
             </section>
-        </div>
+
 
         <section class="footer">
            <p>&copy;Romain Jalabert</p> 

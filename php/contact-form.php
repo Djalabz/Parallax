@@ -1,33 +1,36 @@
 <?php 
 
-// VALIDATING MAIL FORM FIELDS
+// CONTACT FORM with the use of "mail()"
+
+// We are checking of an email has been adressed 
 
 if (isset($_POST['email']) && $_POST['email'] != '') {
-
+    
+    // Now we are checking if the email is an ctual email
     if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 
+        // If it works we get our field informations in $_POST // alternative with HTMLspecialchar
         $userName = $_POST['name'];
         $userEmail = $_POST['email'];
         $userSubject = $_POST['subject'];
         $userMessage = $_POST['message'];
 
-        $dest = 'romainjalabert.pro@gmail.com';
-        $body = '';
+        $mailTo = 'romainjalabert.pro@gmail.com';
 
-        $body = 'From : '.$userName."\r\n";
-        $body = 'Email : '.$userName."\r\n";
-        $body = 'Message : '.$userName."\r\n";
+        $body = 'From : '.$userName."\r\n".'Email : '.$userEmail."\r\n".'Message : '.$userMessage."\r\n";
 
-        mail($dest, $userSubject, $body);
+        // We use the mail() function to send it 
+        mail($mailTo, $userSubject, $body);
 
         $message_sent = true;
-        var_dump($message_sent);
+        echo 'Message Sent !';
 
     } else {
 
         $message_sent = false;
-    }
+        echo "Email adress format is wrong";
 
+    }
 }
 
 ?>
