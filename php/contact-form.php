@@ -28,7 +28,7 @@ if (isset($_POST['email']) && $_POST['email'] != '') {
     } else {
 
         $message_sent = false;
-        echo "Email adress format is wrong";
+        echo "Email format is not valid";
 
     }
 }

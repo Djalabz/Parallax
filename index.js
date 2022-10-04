@@ -216,9 +216,10 @@ form.onsubmit = (e) => {
       if (response.indexOf("required") != -1 || response.indexOf("valid") != -1 || response.indexOf("failed") != -1){
         // statusTxt.style.color = "red";
       } else {
-            form.reset();
-            setTimeout(()=>{
-            }, 3000);
+            form.classList.add('animate__bounceOut')
+            form.style.animationFillMode = 'forwards'
+
+            form.before('Message Sent !')
       }
     }
   }

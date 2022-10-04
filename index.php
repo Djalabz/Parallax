@@ -120,18 +120,15 @@
             </section>
 
 
-
             <section id="contact" class="container">
                 <div class="title">Contact</div>
-
-                <?php include './php/contact-form.php';?>
 
                 <form method="POST" class="contact-form">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="John Doe" required>
                 
                     <label for="email">Email</label>
-                    <input type="emeil" id="email" name="email" placeholder="example@gmail.com" required>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
 
                     <label for="subject">Subject</label>
                     <input type="text" id="subject" name="subject" placeholder="Great app project ! Needs U" required>
