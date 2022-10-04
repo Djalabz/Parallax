@@ -214,12 +214,22 @@ form.onsubmit = (e) => {
       console.log(response)
 
       if (response.indexOf("required") != -1 || response.indexOf("valid") != -1 || response.indexOf("failed") != -1){
-        // statusTxt.style.color = "red";
+
       } else {
             form.classList.add('animate__bounceOut')
             form.style.animationFillMode = 'forwards'
 
-            form.before('Message Sent !')
+            setTimeout(() => {
+                const successMessage = document.createElement('p');
+
+                successMessage.innerText = 'Thank you for your mail !';
+                successMessage.style.fontSize = '2.5rem';
+                successMessage.style.marginTop = '12rem';
+                
+                successMessage.classList.add('animate__bounceIn');
+
+                form.before(successMessage);
+            }, 1000)
       }
     }
   }
