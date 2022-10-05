@@ -199,6 +199,7 @@ leftArrow.addEventListener("click", Decrement)
 
 
 const form = document.querySelector("form")
+const mailField = document.querySelector("input[type=email]")
 
 form.onsubmit = (e) => {
   e.preventDefault();
@@ -207,30 +208,25 @@ form.onsubmit = (e) => {
 
   xhr.open("POST", "./php/contact-form.php", true);
 
-  xhr.onload = ()=>{
-    if(xhr.readyState == 4 && xhr.status == 200){
+  xhr.onload = () => {
+    if(xhr.readyState == 4 && xhr.status == 200) {
+        let response = xhr.response;
+        console.log(response)
 
-      let response = xhr.response;
-      console.log(response)
+        form.classList.add('animate__bounceOut')
+        form.style.animationFillMode = 'forwards'
 
-      if (response.indexOf("required") != -1 || response.indexOf("valid") != -1 || response.indexOf("failed") != -1){
+        setTimeout(() => {
+            const successMessage = document.createElement('p');
 
-      } else {
-            form.classList.add('animate__bounceOut')
-            form.style.animationFillMode = 'forwards'
+            successMessage.innerText = 'Thank you for your mail !';
+            successMessage.style.fontSize = '2.5rem';
+            successMessage.style.marginTop = '12rem';
+            
+            successMessage.classList.add('animate__bounceIn');
 
-            setTimeout(() => {
-                const successMessage = document.createElement('p');
-
-                successMessage.innerText = 'Thank you for your mail !';
-                successMessage.style.fontSize = '2.5rem';
-                successMessage.style.marginTop = '12rem';
-                
-                successMessage.classList.add('animate__bounceIn');
-
-                form.before(successMessage);
-            }, 1000)
-      }
+            form.before(successMessage);
+        }, 1000)
     }
   }
 
