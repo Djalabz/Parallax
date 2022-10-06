@@ -43,7 +43,7 @@ html {
 }
 
 body {
-    background: linear-gradient(.5turn,#F0534D, #6F489E, #65C7EB);
+    background: linear-gradient(.5turn,#FD553F, #6F489E, #65C7EB);
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
@@ -562,12 +562,20 @@ input[type='submit']:hover {
 
 
 
-.footer {
-    text-align: center;
+.copyright {
+    margin-top: 5rem;
 }
 
-.footer p {
-    margin-top: 5rem;
+.social {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;
 }
 
 

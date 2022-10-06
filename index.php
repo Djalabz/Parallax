@@ -34,6 +34,7 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
 
@@ -79,7 +80,7 @@
 
             <section id="portfolio" class="container">
 
-                <div class="title">Portfolio</div>
+                <div class="title portfolio">Portfolio</div>
 
                 <div class="gallery">
                     <div class="arrow left">&#60</div>
@@ -127,6 +128,17 @@
             </section>
 
 
+            <section id="skills" class="container">
+                <div class="title">Skills</div>
+                <div class="skill html"></div>
+                <div class="skill js" ></div>
+                <div class="skill php"></div>
+                <div class="skill css"></div>
+                <div class="skill react"></div>
+                <div class="skill wordpress"></div>
+            </section>
+
+
             <section id="contact" class="container">
                 <div class="title">Contact</div>
 
@@ -149,9 +161,14 @@
 
 
         <section class="footer">
+
             <div class="footer__content">
-                <p>&copy;Romain Jalabert</p> 
-                <div class="social"></div>
+                <p class="copyright">&copy;Romain Jalabert</p> 
+                <div class="social">
+                    <a href="#"><img src="./assets/SVG/icon-linkedin-white.svg" alt="" class="icon linkedin"></img></a>
+                    <a href="#"><img src="./assets/SVG/icon-github-white.svg" alt="" class="icon github"></img><a>
+                    <a href="#"><img src="./assets/SVG/icon-instagram-white.svg" alt="" class="icon instagram"></img><a>
+                </div>
             </div>
 
         </section>

@@ -1,4 +1,4 @@
-// PARALLAX //
+//// PARALLAX // MAIN TITLE VIVUS DRAWING ANIMATION ////
 
 
 const tree1 = document.getElementsByClassName('trees-1')[0]
@@ -14,9 +14,7 @@ const moon = document.getElementsByClassName('moon')[0]
 const clouds = document.querySelectorAll('.cloud')
 
 const titleMain = document.getElementById('title-main')
-
-
-// MAIN TITLE VIVUS DRAWING ANIMATION //
+const titlePortfolio = document.getElementsByClassName('title portfolio')[0]
 
 
 new Vivus('title-main', {type: 'delayed', duration: 90},
@@ -40,28 +38,15 @@ function parallaxScroll() {
 
     moon.style.display = 'none';
 
+
     if (offset < 490) {
-
-        if (tree1.classList.contains('animate__fadeOutUp')) {
-
-            for (i=0; i<mountains.length; i++) {
-                mountains[i].classList.add('animate__animated','animate__fadeIn');
-                mountains[i].style.setProperty('--animate-duration', '2.5s');
-            }
-
-            tree1.classList.remove('animate__fadeOutUp');
-            tree1.classList.add('animate__fadeIn');
-            tree1.style.setProperty('--animate-duration', '1.5s')
-            tree1.style.animationFillMode = 'forwards';
-
-            titleMain.classList.add('animate__animated','animate__fadeIn');
-            titleMain.style.setProperty('--animate-duration', '3s');
-
-        }
             
         titleMain.style.display = 'flex';
         titleMain.style.marginTop = offset * 0.4 + 'px'; 
 
+        titlePortfolio.style.opacity = '0';
+
+        
         for (i=0; i<mountains.length; i++) {
             mountains[i].style.display = 'block';
         }
@@ -83,17 +68,16 @@ function parallaxScroll() {
      
     } else if (offset >= 950) {
 
-        tree1.classList.add('animate__animated', 'animate__fadeOutUp');
-        tree1.style.setProperty('--animate-duration', '2s')
-        tree1.style.animationFillMode = 'forwards';
+        titlePortfolio.style.opacity = '1';
+        titlePortfolio.classList.add('animate__animated', 'animate__fadeInDown')
+        titlePortfolio.style.setProperty('--animate-duration', '2.5s')
+        titlePortfolio.style.animationFillMode = 'forwards';
 
     }
 }
 
 
-
 document.addEventListener('scroll', parallaxScroll);
-// window.addEventListener('load', cloudsIdle);
 
 
 
