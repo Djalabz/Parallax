@@ -12,6 +12,7 @@ const mountains = document.querySelectorAll('.mountains')
 
 const moon = document.getElementsByClassName('moon')[0]
 const clouds = document.querySelectorAll('.cloud')
+const birds = document.getElementsByClassName('birds-container')[0]
 
 const titleMain = document.getElementById('title-main')
 const titlePortfolio = document.getElementsByClassName('title portfolio')[0]
@@ -59,6 +60,8 @@ function parallaxScroll() {
         mountain4.style.bottom = offset * 0.2 + 'px';
         
         moon.style.marginTop = offset/8 + 'px';
+
+        birds.style.marginTop = offset/2 + 'px';
 
         clouds[0].style.left = -(offset/2) -18 + 'px' ;
         clouds[1].style.left = -(offset)-10 + 'px' ;

@@ -556,7 +556,6 @@ input[type='submit']:hover {
     animation-delay: -0.5s;
 }
 
-
 .bird-container {
 	position: absolute;
 	top: 0;
@@ -570,6 +569,7 @@ input[type='submit']:hover {
 }
 	
 .bird-container--one{
+    top: -0.5rem;
     animation-duration: 12s;
     animation-delay: 0;
 }
