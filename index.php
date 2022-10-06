@@ -149,12 +149,19 @@
 
             <section id="skills" class="container">
                 <div class="title">Skills</div>
-                <div class="skill html"></div>
+                <div class="skill html">
+                    <img src="./assets/SVG/" alt="" class="icon skills">
+                </div>
                 <div class="skill js" ></div>
+                    <img src="./assets/SVG/" alt="" class="icon skills">
                 <div class="skill php"></div>
+                    <img src="" alt="" class="icon skills">
                 <div class="skill css"></div>
+                    <img src="" alt="" class="icon skills">
                 <div class="skill react"></div>
+                    <img src="" alt="" class="icon skills">
                 <div class="skill wordpress"></div>
+                    <img src="" alt="" class="icon skills">
             </section>
 
 
