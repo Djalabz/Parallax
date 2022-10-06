@@ -558,7 +558,7 @@ input[type='submit']:hover {
 
 .bird-container {
 	position: absolute;
-	top: 20%;
+	top: 0;
 	left: -10%;
 	transform: scale(0) translateX(-10vw);
 	will-change: transform;
@@ -566,7 +566,6 @@ input[type='submit']:hover {
 	animation-name: fly-right-one;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
-
 }
 	
 .bird-container--one{

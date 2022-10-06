@@ -188,7 +188,7 @@ form.onsubmit = (e) => {
         setTimeout(() => {
             const successMessage = document.createElement('p');
 
-            successMessage.innerText = 'Thank you for your mail !';
+            successMessage.innerHTML = 'Thank you for <br> your mail !';
             successMessage.style.fontSize = '2.5rem';
             successMessage.style.marginTop = '12rem';
             
