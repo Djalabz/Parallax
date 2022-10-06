@@ -36,6 +36,10 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
+
+                    <div class="logo">
+                        <p><span>Romain Jalabert</span><br>Web Developper</p>
+                    </div>
                 </div>
 
             </section>
@@ -51,12 +55,14 @@
 
                 <div class="landscape">
 
-                    <img class="mountains-4" src="./assets/SVG/mountains4.svg" alt="">
-                    <img class="mountains-3" src="./assets/SVG/mountains-3-3.svg" alt="">
-                    <img class="mountains-2" src="./assets/SVG/mountains2.svg" alt="">
-                    <img class="mountains-1" src="./assets/SVG/mountains1.svg" alt="">
-                    <img class="trees-1" src="./assets/SVG/treesLarge.svg" alt="">
-                    <img class="trees-mobile" src="./assets/SVG/trees-mobile.svg" alt="">
+                    <img class="mountains" id="m4" src="./assets/SVG/mountains4.svg" alt="">
+                    <img class="mountains" id="m3" src="./assets/SVG/mountains-3-3.svg" alt="">
+                    <img class="mountains" id="m2" src="./assets/SVG/mountains2.svg" alt="">
+                    <img class="mountains" id="m1" src="./assets/SVG/mountains1.svg" alt="">
+
+
+                    <img class="trees-1" src="./assets/SVG/trees-curve-desk.svg" alt="">
+                    <img class="trees-mobile" src="./assets/SVG/trees-curve-mobile.svg" alt="">
 
                     <img src="./assets/SVG/cloud-full-left1.svg" alt="" class="cloud left1">
                     <img src="./assets/SVG/cloudLeft2.svg" alt="" class="cloud left2">
@@ -64,7 +70,6 @@
                     <img src="./assets/SVG/cloudRight1.svg" alt="" class="cloud right1">
                     <img src="./assets/SVG/cloudRight2.svg" alt="" class="cloud right2">
                     <div class="moon"></div>
-
 
                 </div>
 
@@ -117,6 +122,8 @@
 
             <section id="about" class="container">
                 <div class="title">About</div>
+                <div class="left"></div>
+                <div class="right"></div>
             </section>
 
 
@@ -142,7 +149,11 @@
 
 
         <section class="footer">
-           <p>&copy;Romain Jalabert</p> 
+            <div class="footer__content">
+                <p>&copy;Romain Jalabert</p> 
+                <div class="social"></div>
+            </div>
+
         </section>
 
     </div>    

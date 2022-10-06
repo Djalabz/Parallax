@@ -1,30 +1,14 @@
-
-// MAIN TITLE // 
-
-// const letters = document.getElementsById('title-main')
-
-
-// function animateLetters() {
-//     for (i=0; i<letters.length; i++) {
-//         delay = (i*80).toString();
-//         letters[i].style.animation = 'pulse 0.3s ' + delay + 'ms';
-//     } 
-// }
-
-// var intervalLetters = setInterval(animateLetters, 2000)
-
-
-
 // PARALLAX //
-
 
 
 const tree1 = document.getElementsByClassName('trees-1')[0]
 const treeMobile = document.getElementsByClassName('trees-mobile')[0]
-const mountain1 = document.getElementsByClassName('mountains-1')[0]
-const mountain2 = document.getElementsByClassName('mountains-2')[0]
-const mountain3 = document.getElementsByClassName('mountains-3')[0]
-const mountain4 = document.getElementsByClassName('mountains-4')[0]
+const mountain1 = document.getElementById('m1')
+const mountain2 = document.getElementById('m2')
+const mountain3 = document.getElementById('m3')
+const mountain4 = document.getElementById('m4')
+
+const mountains = document.querySelectorAll('.mountains')
 
 const moon = document.getElementsByClassName('moon')[0]
 const clouds = document.querySelectorAll('.cloud')
@@ -32,7 +16,7 @@ const clouds = document.querySelectorAll('.cloud')
 const titleMain = document.getElementById('title-main')
 
 
-   // MAIN TITLE VIVUS DRAWING ANIMATION //
+// MAIN TITLE VIVUS DRAWING ANIMATION //
 
 
 new Vivus('title-main', {type: 'delayed', duration: 90},
@@ -41,68 +25,69 @@ new Vivus('title-main', {type: 'delayed', duration: 90},
     }
 )
 
-
-// function cloudsIdle() {
-    
-//     let offset = window.scrollY
-
-//     if (offset < 300) {
-//         for (i=0; i<5; i++) {
-//             clouds[i].style.animation = "cloudsIdle 10s forwards";
-//         }
-        
-//     }
-// }
-
-
 function parallaxScroll() {
 
     let offset = window.scrollY
 
-    console.log()
+    tree1.style.marginTop = - offset + 'px';
+    treeMobile.style.marginTop = -(offset/10) + 'vh';
+
+    titleMain.style.display = 'none';
+
+    for (i=0; i<mountains.length; i++) {
+        mountains[i].style.display = 'none';
+    }
+
+    moon.style.display = 'none';
 
     if (offset < 490) {
 
+        if (tree1.classList.contains('animate__fadeOutUp')) {
+
+            for (i=0; i<mountains.length; i++) {
+                mountains[i].classList.add('animate__animated','animate__fadeIn');
+                mountains[i].style.setProperty('--animate-duration', '2.5s');
+            }
+
+            tree1.classList.remove('animate__fadeOutUp');
+            tree1.classList.add('animate__fadeIn');
+            tree1.style.setProperty('--animate-duration', '1.5s')
+            tree1.style.animationFillMode = 'forwards';
+
+            titleMain.classList.add('animate__animated','animate__fadeIn');
+            titleMain.style.setProperty('--animate-duration', '3s');
+
+        }
+            
         titleMain.style.display = 'flex';
         titleMain.style.marginTop = offset * 0.4 + 'px'; 
 
-        mountain1.style.display = 'block';
-        mountain2.style.display = 'block';
-        mountain3.style.display = 'block';
-        mountain4.style.display = 'block';
+        for (i=0; i<mountains.length; i++) {
+            mountains[i].style.display = 'block';
+        }
 
         moon.style.display = 'block';
-
-        tree1.style.marginTop = - offset + 'px';
-        treeMobile.style.marginTop = -(offset/10) + 'vh';
 
         mountain1.style.bottom = offset * 0.5 + 'px';
         mountain2.style.bottom = offset * 0.35 + 'px';
         mountain3.style.bottom = offset * 0.25 + 'px';
         mountain4.style.bottom = offset * 0.2 + 'px';
         
-        moon.style.marginTop = offset/1.6 + 'px';
+        moon.style.marginTop = offset/8 + 'px';
 
         clouds[0].style.left = -(offset/2) -18 + 'px' ;
         clouds[1].style.left = -(offset)-10 + 'px' ;
         clouds[2].style.left = 140-(offset/1.3) + 'px' ;
         clouds[3].style.right = -14-(offset/1.3) + 'px' ;
         clouds[4].style.right = -20-(offset) + 'px' ;
+     
+    } else if (offset >= 950) {
 
+        tree1.classList.add('animate__animated', 'animate__fadeOutUp');
+        tree1.style.setProperty('--animate-duration', '2s')
+        tree1.style.animationFillMode = 'forwards';
 
-    } else {        
-
-        titleMain.style.display = 'none';
-
-        tree1.style.marginTop = - offset + 'px';
-        treeMobile.style.marginTop = -(offset/10) + 'vh';
-
-        mountain1.style.display = 'none';
-        mountain2.style.display = 'none';
-        mountain3.style.display = 'none';
-        mountain4.style.display = 'none';
-        moon.style.display = 'none';
-    } 
+    }
 }
 
 
@@ -232,7 +217,6 @@ form.onsubmit = (e) => {
 
   let formData = new FormData(form);
   xhr.send(formData);
-
 }
 
 

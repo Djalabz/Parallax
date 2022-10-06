@@ -35,6 +35,8 @@
 
 /* MAIN CSS  */
 
+
+
 html {
 	scroll-behavior: smooth;
     scroll-padding-top: 6rem;
@@ -63,8 +65,41 @@ body {
 }
 
 
-/* NAVBAR  */
 
+/* ////// HEADER ////// */
+
+
+
+.logo {
+    position: fixed;
+    top: 0.2rem;
+    right: 3.2rem;
+    letter-spacing: 0.08rem;
+    font-size: 1.2rem;
+}
+
+.logo p::after {
+    content: '}';
+    position: fixed;
+    right: 1.9rem;
+    transform: scale(2,2.5);
+    top: 2.25rem;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+}
+
+.logo p::before {
+    content: '{';
+    position: fixed;
+    right: 14.2rem;
+    transform: scale(2, 2.5);
+    top: 2.25rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;    
+}
+
+.logo span {
+    text-transform: uppercase;
+    letter-spacing: normal;
+}
 
 .navBtn {
     width: 30px;
@@ -150,18 +185,18 @@ body {
     animation: fadeInNav;
     animation-duration: 0.5s;
     list-style-type: none;
-    margin-left: 5.5rem;
+    margin-left: 5rem;
     margin-top: 0rem;
 }
 
 @keyframes fadeInNav {
     0% {opacity: 0; margin-left: 0rem;}
     60% {opacity: 20%; margin-left: 3.3;}
-    100% {opacity: 1; margin-left: 5.5rem;}
+    100% {opacity: 1; margin-left: 5rem;}
 }
 
 @keyframes fadeOutNav {
-    0% {opacity: 1; margin-left: 5.5rem;}
+    0% {opacity: 1; margin-left: 5rem;}
     60% {opacity: 20%;}
     100% {opacity: 0; margin-left: 0rem;}
 
@@ -238,24 +273,14 @@ a:hover {
     display: block;
 }
 
-.title.main {
-    display: flex;
-    justify-content: center;
-    height: 420px;
-    position: fixed;
-    top: 6rem;
-    left: 6rem;
-    width: 78vw;
-}
-
 #title-main {
     display: flex;
     justify-content: center;
     height: 420px;
     position: fixed;
     top: 6rem;
-    left: 6rem;
-    width: 78vw;
+    left: 8rem;
+    width: 75vw;
 }
 
 #title-main {
@@ -428,29 +453,27 @@ input[type='submit']:hover {
     width: 112vw;
     left: -1em;
     top: 440px;
-    filter: drop-shadow(-2.5rem 3rem 40px #19113F);
 }
 
 .trees-mobile {
     display: none;
 }
 
-.mountains-1 {
+#m1 {
     width: 130vw;
     left: 0;
     bottom: 0;
     height: 320px;
 }
 
-
-.mountains-2 {
+#m2 {
     width: 100vw;
     left:-20rem;
     bottom: 0;
     height: 280px;
 }
 
-.mountains-3 {
+#m3 {
     width: 140vw;
     left: -6rem;
     bottom: 0;
@@ -458,7 +481,7 @@ input[type='submit']:hover {
     z-index: -2;
 }
 
-.mountains-4 {
+#m4 {
     width: 140vw;
     left:0;
     bottom: 0;
@@ -484,6 +507,7 @@ input[type='submit']:hover {
 
 
 /* CLOUDS  */
+
 
 
 .cloud {
@@ -534,6 +558,19 @@ input[type='submit']:hover {
 }
 
 
+/* ////// FOOTER ////// */
+
+
+
+.footer {
+    text-align: center;
+}
+
+.footer p {
+    margin-top: 5rem;
+}
+
+
 
 /* ////////// MEDIA QUERIES ////////// */
 
@@ -548,6 +585,10 @@ larger -- 2560px
 
 
 @media (min-width: 359px) and (max-width: 768px) {
+
+    .logo {
+        display: none;
+    }
 
     .navBtn {
         top: 2.8vh;
@@ -618,22 +659,22 @@ larger -- 2560px
         display: none;
     }
     
-    .mountains-1 {
+    #m1 {
         height: 440px;
     }
 
-    .mountains-2 {
+    #m2 {
         height: 380px;
         left: -7rem;
     }
 
-    .mountains-3 {
+    #m3 {
         height: 530px;
         left: 0rem;
         width: 120vw;
     }
 
-    .mountains-4 {
+    #m4 {
         height: 540px;
         left: -0rem;
     }
@@ -645,22 +686,22 @@ larger -- 2560px
         top: 5vh;
     }
 
-    .mountains-1 {
+    #m1 {
         height: 330px;
     }
 
-    .mountains-2 {
+    #m2 {
         height: 300px;
         left: -7rem;
     }
 
-    .mountains-3 {
+    #m3 {
         height: 430px;
         left: 0rem;
         width: 120vw;
     }
 
-    .mountains-4 {
+    #m4 {
         height: 370px;
         left: -0rem;
     }
