@@ -524,7 +524,7 @@ input[type='submit']:hover {
 }
 
 .bird {
-	background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells.svg);
+	background-image: url(./assets/SVG/birds.svg);
 	background-size: auto 100%;
 	width: 88px;
 	height: 125px;
@@ -740,9 +740,12 @@ input[type='submit']:hover {
     width: 2rem;
     height: 2rem;
     margin-right: 1rem;
+    opacity: 0.7;
 }
 
-
+.icon:hover {
+    opacity: 1;
+}
 
 /* ////////// MEDIA QUERIES ////////// */
 
