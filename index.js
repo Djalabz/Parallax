@@ -27,9 +27,10 @@ new Vivus('title-main', {type: 'delayed', duration: 90},
 function parallaxScroll() {
 
     let offset = window.scrollY
+    let unitHeight = innerHeight/100;
 
     tree1.style.marginTop = - offset + 'px';
-    treeMobile.style.marginTop = -(offset/10) + 'vh';
+    treeMobile.style.marginTop = -(offset/8) + 'vh';
 
     titleMain.style.display = 'none';
 
@@ -40,7 +41,7 @@ function parallaxScroll() {
     moon.style.display = 'none';
 
 
-    if (offset < 490) {
+    if ((unitHeight*70) > offset) {
             
         titleMain.style.display = 'flex';
         titleMain.style.marginTop = offset * 0.4 + 'px'; 
@@ -69,7 +70,7 @@ function parallaxScroll() {
         clouds[3].style.right = -14-(offset/1.3) + 'px' ;
         clouds[4].style.right = -20-(offset) + 'px' ;
      
-    } else if (offset >= 950) {
+    } else if (offset >= unitHeight*90) {
 
         titlePortfolio.style.opacity = '1';
         titlePortfolio.classList.add('animate__animated', 'animate__fadeInDown')
@@ -122,13 +123,13 @@ navBtn[0].addEventListener("click", handleMenu);
 const allCards = document.querySelectorAll(".card");
 const rightArrow = document.querySelector(".arrow.right");
 const leftArrow = document.querySelector(".arrow.left");
-const current = document.getElementsByClassName('current')
+const current = document.getElementsByClassName('current')[0];
 
 
 
 const Decrement = () => {
-    const nextCard = current[0].nextElementSibling
-    const prevCard = current[0].previousElementSibling
+    const nextCard = current[0].nextElementSibling;
+    const prevCard = current[0].previousElementSibling;
 
     if (prevCard.previousElementSibling) {
         current[0].classList.add('next')
@@ -145,8 +146,8 @@ const Decrement = () => {
 
 
 const Increment = () => {
-    const nextCard = current[0].nextElementSibling
-    const prevCard = current[0].previousElementSibling
+    const nextCard = current[0].nextElementSibling;
+    const prevCard = current[0].previousElementSibling;
 
     if (nextCard.nextElementSibling) {
         current[0].classList.add('prev')
@@ -161,8 +162,21 @@ const Increment = () => {
     } 
 }
 
+
+
+const scaleUp = () => {
+    console.log('scaling')
+    current.style.transition = 'ease-in-out'
+    current.style.transform = "scale(2)"
+}
+
+
+
+current.addEventListener("click", scaleUp)
 rightArrow.addEventListener("click", Increment)
 leftArrow.addEventListener("click", Decrement)
+
+
 
 
 

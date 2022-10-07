@@ -1,0 +1,83 @@
+/* PORTFOLIO */
+
+
+
+#portfolio {
+    margin-top: 120vh;
+}
+
+
+.card {
+    background-color: white;
+    margin: 5rem auto;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+    top:5rem;
+}
+
+@keyframes fadeInCard {
+    0% {opacity: 0;}
+    100% {opacity: 0.6;}
+}
+
+.card.current {
+    width: 200px;
+    height: 200px;
+    margin-top: 6rem;
+    left: 300px;
+    top: 0rem;
+    opacity: 1;
+    display: block;
+    transition-property: width, height, left, top, opacity;
+    transition-duration: 0.3s;
+}
+
+
+.card.current>.title {
+    margin-top: 7.5rem;
+}
+
+.card.prev, .card.next {
+    opacity: 60%;
+    width: 120px;
+    height: 120px;
+    display: block;
+    transition-property: width, height, left, top, opacity;
+    transition-duration: 0.3s;
+    animation-name: fadeInCard;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.card.prev {
+    left: 120px;
+}
+
+.card.next {
+    left: 560px;
+}
+
+.arrow {
+    position: absolute;
+    top: 11rem;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.arrow.left {
+    left: 2rem;
+}
+
+.arrow.right {
+    right: 2rem;
+}
+
+.gallery {
+    width: 800px;
+    height: 400px;
+    margin: 4rem auto;
+    position: relative;
+}

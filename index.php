@@ -30,7 +30,7 @@
                         <div class="glow"></div>
                     </div>
 
-                    <ul class="menu-list">
+                    <ul class="menu-list open">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#about">About</a></li>
@@ -39,7 +39,8 @@
                     </ul>
 
                     <div class="logo">
-                        <p><span>Romain Jalabert</span><br>Web Developper</p>
+                        <p><span>Romain Jalabert</span>
+                        <br>Web Developper</p>
                     </div>
                 </div>
 
@@ -48,7 +49,6 @@
             
 
             <section id="home" class="container">
-
                 <div class="birds-container">
                         <div class="bird-container bird-container--one">
                             <div class="bird bird--one"></div>
