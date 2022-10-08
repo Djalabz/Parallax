@@ -183,11 +183,6 @@ larger -- 2560px
         width: 320px;
     }
 
-    .moon {
-        width: 2.7rem;
-        height: 2.7rem;
-    }
-
     .cloud.center {
         left: 40px;
         top: 10rem;
@@ -210,8 +205,8 @@ larger -- 2560px
     }
 
     #m2 {
-        height: 57vh;
-        left: -7rem;
+        height: 52vh;
+        left: -12rem;
     }
 
     #m3 {
@@ -221,7 +216,7 @@ larger -- 2560px
     }
 
     #m4 {
-        height: 65vh;
+        height: 61vh;
         left: -0rem;
     }
 
@@ -254,12 +249,38 @@ larger -- 2560px
 
 }
 
+
+
+@media (min-width: 359px) and (max-width: 499px) and (min-height: 841px) and (max-height: 1039px) {
+
+    #title-main {
+        top: 35vh
+    }
+
+    .trees-mobile {
+        top: 70vh;
+    }
+
+}
+
+
+@media (min-width: 500px) and (max-width: 767px) {
+
+    #m2 {
+        height: 47vh;
+        left: -12rem;
+    }
+
+}
+
+
+
 @media (min-width: 768px) and (max-width: 1279px) {
 
     .trees-mobile {
         display: block;
         left: -1em;
-        width: 160vw;
+        width: 140vw;
         top: 66vh;
     }
 
@@ -268,15 +289,15 @@ larger -- 2560px
     }
 
     #m1 {
-        height: 52vh;
+        height: 50vh;
     }
 
     #m2 {
-        height: 49vh;
+        height: 45vh;
     }
 
     #m3 {
-        height: 68vh;
+        height: 69vh;
     }
 
     #m4 {
@@ -290,19 +311,14 @@ larger -- 2560px
 }
 
 
-@media (min-width: 359px) and (max-width: 768px) and (min-height: 841px) and (max-height: 1039px) {
-
-    #title-main {
-        top: 35vh
-    }
-
-    .trees-mobile {
-        top: 70vh;
+@media (min-width: 1280px) and (min-height: 2259px) {
+    .moon {
+        top: 20vh;
     }
 }
 
 
-@media (min-width: 2560px) and (min-height: 1040px) {
+@media (min-width: 2260px) and (min-height: 1040px) {
     .trees-1 {
         top: 60vh
     }
@@ -315,7 +331,7 @@ larger -- 2560px
 
     #m2 {
         width: 100vw;
-        left: -34rem;
+        left: -38rem;
         height: 40vh;
     }
 
@@ -330,5 +346,9 @@ larger -- 2560px
         width: 140vw;
         left: -10vw;
         height: 50vh;
+    }
+
+    .moon {
+        top: 20vh;
     }
 }

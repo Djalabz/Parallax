@@ -26,9 +26,14 @@ new Vivus('title-main', {type: 'delayed', duration: 90},
 
 function parallaxScroll() {
 
-    let offset = window.scrollY
-    let unitHeight = innerHeight/100;
+    let offset = window.scrollY;
 
+    let moonOffset = moon.offsetTop;
+    let treesOffset = tree1.offsetTop;
+    let treesMobileOffset = treeMobile.offsetTop;
+
+    let unitHeight = innerHeight/100;
+    
     tree1.style.marginTop = - offset + 'px';
     treeMobile.style.marginTop = -(offset/8) + 'vh';
 
@@ -40,8 +45,9 @@ function parallaxScroll() {
 
     moon.style.display = 'none';
 
+    // if ((unitHeight*70) > offset)
 
-    if ((unitHeight*70) > offset) {
+    if (offset < 500) {
             
         titleMain.style.display = 'flex';
         titleMain.style.marginTop = offset * 0.4 + 'px'; 
@@ -70,14 +76,14 @@ function parallaxScroll() {
         clouds[3].style.right = -14-(offset/1.3) + 'px' ;
         clouds[4].style.right = -20-(offset) + 'px' ;
      
-    } else if (offset >= unitHeight*90) {
+    } // else if (offset >= unitHeight*90) {
 
-        titlePortfolio.style.opacity = '1';
-        titlePortfolio.classList.add('animate__animated', 'animate__fadeInDown')
-        titlePortfolio.style.setProperty('--animate-duration', '2.5s')
-        titlePortfolio.style.animationFillMode = 'forwards';
+    //     titlePortfolio.style.opacity = '1';
+    //     titlePortfolio.classList.add('animate__animated', 'animate__fadeInDown')
+    //     titlePortfolio.style.setProperty('--animate-duration', '2.5s')
+    //     titlePortfolio.style.animationFillMode = 'forwards';
 
-    }
+    // }
 }
 
 

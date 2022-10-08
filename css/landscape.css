@@ -80,9 +80,9 @@
     background: linear-gradient(orange, white);
     border-radius: 100%;
     position: fixed;
-    top: 7rem;
     right: 20%;
     z-index: -99;
+    top: 20vh;
 }
 
 
