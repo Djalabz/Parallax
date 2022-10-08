@@ -1,0 +1,141 @@
+
+/* //// LANDSCAPE //// */
+
+
+#title-main {
+    stroke-linecap: square;
+    fill-opacity: 0;
+    transition: fill-opacity 1s;
+}
+
+#title-main.finished {
+    fill-opacity: 1;
+}
+
+#title-main {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 35vh;
+    left: 15vw;
+    width: 68vw;
+}
+
+.landscape {
+    width: 100vw;
+}
+
+.landscape>img {
+    position: fixed;
+}
+
+.trees-1 {
+    width: 112vw;
+    left: -1em;
+    top: 70vh;
+}
+
+.trees-mobile {
+    display: none;
+}
+
+#m1 {
+    width: 130vw;
+    left: 0;
+    bottom: 0;
+    height: 40vh;
+}
+
+#m2 {
+    width: 100vw;
+    left:-20rem;
+    bottom: 0;
+    height: 36vh;
+}
+
+#m3 {
+    width: 140vw;
+    left: -6rem;
+    bottom: 0;
+    height: 61vh;
+    z-index: -2;
+}
+
+#m4 {
+    width: 140vw;
+    left:0;
+    bottom: 0;
+    height: 45vh;
+}
+
+.moon-light {
+    position: fixed;
+    right: 4rem;
+    z-index: -5;
+}
+
+.moon {
+    width: 4rem;
+    height: 4rem;
+    background: linear-gradient(orange, white);
+    border-radius: 100%;
+    position: fixed;
+    right: 20%;
+    z-index: -99;
+    top: 20vh;
+}
+
+
+
+
+/* CLOUDS  */
+
+
+
+.cloud {
+    position: fixed;
+    z-index: -98;
+}
+
+.cloud.left1 {
+    left:-18px;
+    width: 17vw;
+}
+
+.cloud.left2 {
+    top: 18rem;
+    left:-10px;
+    width: 20vw;
+}
+
+.cloud.center {
+    left: 140px;
+    top: 13rem;
+    width: 19vw;
+}
+
+.cloud.right1 {
+    right: -14px;
+    width: 22vw;
+    top:12rem;
+}
+
+.cloud.right2 {
+    right: -20px;
+    width: 17vw;
+    top:7rem;
+}
+
+
+@keyframes cloudsIdle {
+    0% {
+        left: -18px;
+    }
+    50% {
+        left: 400px;
+    }
+    100% {
+        left: 800px;
+    }
+}
+

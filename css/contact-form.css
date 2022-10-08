@@ -1,0 +1,42 @@
+/* ////// Contact FORM //////  */
+
+
+.contact-form {
+    display: grid;
+    width: 400px;
+    text-align: left;
+    margin: 2rem auto;
+}
+
+
+.contact-form input, select, textarea {
+    border: none;
+    border-radius: 6px;
+    height: 1.4rem;
+    padding: 4px;
+    font-family: open-sans;
+}
+
+select {
+    height: 1.8rem;
+}
+
+label {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+input[type='submit'] {
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    border: solid 2px white;
+    background-color: transparent;
+    height: 2.3rem;
+}
+
+input[type='submit']:hover {
+    background-color: white;
+    color: black;
+}
