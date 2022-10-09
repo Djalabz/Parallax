@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-    <script type="module" src="./index.js" defer></script>
+    <script type="text/javascript" src="./index.js" defer></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/vivus/0.2.1/vivus.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
 
     <title>Parallax Portfolio</title>
@@ -158,13 +159,18 @@
                         <div class="resume">download resume</div>
                     </div>
                     <div class="bottom">
-                        <div>HTML</div>
-                        <div>CSS</div>
-                        <div>JAVASCRIPT</div>
-                        <div>PHP</div>
-                        <div>SQL</div>
-                        <div>REACT</div>
-                        <div>WORDPRESS</div>
+                        <!-- <ul class="skills">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JAVASCRIPT</li>
+                            <li>PHP</li>
+                            <li>SQL</li>
+                            <li>REACT</li>
+                            <li>WORDPRESS</li>
+                        </ul> -->
+                        <div>
+                            <canvas id="skillsChart"></canvas>
+                        </div>
                     </div>
                 </div>
 

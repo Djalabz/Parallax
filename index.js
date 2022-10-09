@@ -230,3 +230,42 @@ form.onsubmit = (e) => {
 
 
 
+//// SKILLS CHART using Chart JS /////
+
+
+const labels = ['HTML', 'CSS', 'JS', 'REACT', 'PHP', 'SQL', 'WORDPRESS'];
+
+
+const data = {
+    labels: labels,
+    datasets: [{
+      label: 'Skills so far',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [83, 75, 71, 65, 65, 70, 75],
+      max: 100,
+    }]
+  };
+
+
+const config = {
+    type: 'bar',
+    data: data,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: true,
+          text: 'Chart.js Bar Chart'
+        }
+      }
+    },
+  };
+
+  const skillsChart = new Chart(
+    document.getElementById('skillsChart'),
+    config
+  );

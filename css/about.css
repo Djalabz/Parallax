@@ -24,8 +24,8 @@
 }
 
 #about .content {
-    margin-top: 8rem;
-    padding: 3rem;
+    margin-top: 4rem;
+    padding: 2.5rem;
     display: grid;
     text-align: left;
     background: rgba(255, 255, 255, 0.17);
@@ -54,7 +54,14 @@
 
 #about .bottom {
     width: 100%;
+    padding-top: 1rem;
     margin-top: 2rem;
     border-top: solid 2px white;
     grid-area: 2 / 1 / 2 / 2;
+    height: 100px;
 }
+
+#skillsChart {
+    width: 100%;
+}
+

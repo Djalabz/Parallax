@@ -1,6 +1,10 @@
 
 /* //// LANDSCAPE //// */
 
+#home {
+    height: 160vh;
+}
+
 
 #title-main {
     stroke-linecap: square;
