@@ -7,13 +7,10 @@ const mountain1 = document.getElementById('m1')
 const mountain2 = document.getElementById('m2')
 const mountain3 = document.getElementById('m3')
 const mountain4 = document.getElementById('m4')
-
 const mountains = document.querySelectorAll('.mountains')
-
 const moon = document.getElementsByClassName('moon')[0]
 const clouds = document.querySelectorAll('.cloud')
 const birds = document.getElementsByClassName('birds-container')[0]
-
 const titleMain = document.getElementById('title-main')
 const titlePortfolio = document.getElementsByClassName('title portfolio')[0]
 
@@ -28,18 +25,18 @@ function parallaxScroll() {
 
     let offset = window.scrollY;
 
-    let moonOffset = moon.offsetTop;
-    let treesOffset = tree1.offsetTop;
-    let treesMobileOffset = treeMobile.offsetTop;
+    // let moonOffset = moon.offsetTop;
+    // let treesOffset = tree1.offsetTop;
+    // let treesMobileOffset = treeMobile.offsetTop;
 
-    let unitHeight = innerHeight/100;
+    // let unitHeight = innerHeight/100;
     
     tree1.style.marginTop = - offset + 'px';
     treeMobile.style.marginTop = -(offset/8) + 'vh';
 
     titleMain.style.display = 'none';
 
-    for (i=0; i<mountains.length; i++) {
+    for (let i=0; i<mountains.length; i++) {
         mountains[i].style.display = 'none';
     }
 
@@ -55,7 +52,7 @@ function parallaxScroll() {
         titlePortfolio.style.opacity = '0';
 
         
-        for (i=0; i<mountains.length; i++) {
+        for (let i=0; i<mountains.length; i++) {
             mountains[i].style.display = 'block';
         }
 
@@ -75,19 +72,20 @@ function parallaxScroll() {
         clouds[2].style.left = 140-(offset/1.3) + 'px' ;
         clouds[3].style.right = -14-(offset/1.3) + 'px' ;
         clouds[4].style.right = -20-(offset) + 'px' ;
-     
-    } // else if (offset >= unitHeight*90) {
+    
+    }  else if (offset > 850) {
 
-    //     titlePortfolio.style.opacity = '1';
-    //     titlePortfolio.classList.add('animate__animated', 'animate__fadeInDown')
-    //     titlePortfolio.style.setProperty('--animate-duration', '2.5s')
-    //     titlePortfolio.style.animationFillMode = 'forwards';
+        titlePortfolio.style.opacity = '1';
+        titlePortfolio.classList.add('animate__animated', 'animate__fadeInDown')
+        titlePortfolio.style.setProperty('--animate-duration', '2.5s')
+        titlePortfolio.style.animationFillMode = 'forwards';
 
-    // }
+    }
 }
 
 
 document.addEventListener('scroll', parallaxScroll);
+
 
 
 
@@ -119,6 +117,7 @@ function handleMenu() {
 }
 
 navBtn[0].addEventListener("click", handleMenu);
+
 
 
 
@@ -187,6 +186,7 @@ leftArrow.addEventListener("click", Decrement)
 
 
 ////// CONTACT FORM AJAX CALL //////
+
 
 
 

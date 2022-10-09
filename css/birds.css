@@ -61,26 +61,26 @@
 	
 .bird-container--one{
     top: -0.5rem;
-    animation-duration: 12s;
+    animation-duration: 11s;
     animation-delay: 0;
 }
 
 .bird-container--two {
     top: 4rem;
-    animation-duration: 12.5s;
+    animation-duration: 11.5s;
     animation-delay: 1s;
     animation-name: fly-right-two;
 }
 
 .bird-container--three {
     top: 2rem;
-    animation-duration: 13s;
+    animation-duration: 12s;
     animation-delay: 9.5s;
 }
 
 .bird-container--four {
     top: 10rem;
-    animation-duration: 11.5s;
+    animation-duration: 10.5s;
     animation-delay: 10.25s;
     animation-name: fly-right-two;
 }
@@ -141,15 +141,15 @@
 	}
 	
 	20% {
-		transform: translateY(-2vh) translateX(30vw) scale(0.6);
+		transform: translateY(1vh) translateX(30vw) scale(0.6);
 	}
 	
 	30% {
-		transform: translateY(1vh) translateX(50vw) scale(0.45);
+		transform: translateY(2vh) translateX(50vw) scale(0.45);
 	}
 	
 	40% {
-		transform: translateY(-2.5vh) translateX(70vw) scale(0.5);
+		transform: translateY(1.5vh) translateX(70vw) scale(0.5);
 	}
 	
 	50% {
@@ -157,11 +157,11 @@
 	}
 	
 	60% {
-		transform: translateY(1vh) translateX(110vw) scale(0.45);
+		transform: translateY(-1vh) translateX(110vw) scale(0.45);
 	}
 	
 	100% {
-		transform: translateY(0vh) translateX(110vw) scale(0.45);
+		transform: translateY(-1.5vh) translateX(110vw) scale(0.45);
 	}
 	
 }

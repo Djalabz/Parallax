@@ -8,6 +8,7 @@
 @import "./css/header.css";
 @import "./css/footer.css";
 @import "./css/landscape.css";
+@import "./css/about.css";
 
 
 /* // FONTS // */
@@ -69,21 +70,12 @@ body {
 .container {
     text-align: center;
     width: 100%;
-    height: 600px;
+    height: 100vh;
     margin: auto;
     margin-bottom: 8rem;
     margin-top: 7rem;
 }
 
-.sun {
-    border-radius: 100%;
-    margin-top: 0.7rem;
-    background: linear-gradient(to bottom, orange, salmon);
-    max-width: 60px;
-    height: 60px;
-    margin-left: 72%;
-    box-shadow: 0rem 0rem 4rem darkorange;
-}
 
 .block2 {
     margin-top: 6.2rem;
@@ -212,7 +204,7 @@ larger -- 2560px
     #m3 {
         height: 72vh;
         left: -1vw;
-        width: 120vw;
+        width: 125vw;
     }
 
     #m4 {
@@ -235,7 +227,7 @@ larger -- 2560px
     
     .bird-container--three {
         top: 2rem;
-        animation-duration: 3s;
+        animation-duration: 5s;
         animation-delay: 9.5s;
     }
     
@@ -281,7 +273,7 @@ larger -- 2560px
         display: block;
         left: -1em;
         width: 140vw;
-        top: 66vh;
+        top: 62vh;
     }
 
     .trees-1 {
@@ -301,7 +293,7 @@ larger -- 2560px
     }
 
     #m4 {
-        height: 60vh;
+        height: 56vh;
         left: -8vw;
     }
 

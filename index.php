@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-    <script type="text/javascript" src="./index.js" defer></script>
+    <script type="module" src="./index.js" defer></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/vivus/0.2.1/vivus.min.js"></script>
     
 
@@ -142,12 +142,36 @@
 
             <section id="about" class="container">
                 <div class="title">About</div>
-                <div class="left"></div>
-                <div class="right"></div>
+                <div class="content">
+                    <div class="left">
+                        <img src="" alt="" class="portrait">
+                        <p class="quote"></p>
+                    </div>
+                    <div class="right">
+                        <h1 class="name">Romain Jalabert</h1>
+                        <h2 class="job">Web Developper - Front-end oriented</h2>
+                        <p class="description">
+                            Hi there and welcome ! I am Romain, 33 and I propose my services as a freelance web developper. 
+                            Working on many various projects since now 4 years as a freelance (from real estate to the car industry) I can help you to build 
+                            your websites and applications. Originally in the digital field in Germany with Babbel I also carry a good knowledge of business practices
+                            as well as the tech environment.</p>
+                        <div class="resume">download resume</div>
+                    </div>
+                    <div class="bottom">
+                        <div>HTML</div>
+                        <div>CSS</div>
+                        <div>JAVASCRIPT</div>
+                        <div>PHP</div>
+                        <div>SQL</div>
+                        <div>REACT</div>
+                        <div>WORDPRESS</div>
+                    </div>
+                </div>
+
             </section>
 
 
-            <section id="skills" class="container">
+            <!-- <section id="skills" class="container">
                 <div class="title">Skills</div>
                 <div class="skill html">
                     <img src="./assets/SVG/" alt="" class="icon skills">
@@ -162,7 +186,7 @@
                     <img src="" alt="" class="icon skills">
                 <div class="skill wordpress"></div>
                     <img src="" alt="" class="icon skills">
-            </section>
+            </section> -->
 
 
             <section id="contact" class="container">
