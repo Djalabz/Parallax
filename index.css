@@ -1,7 +1,6 @@
 /* // IMPORT // */ 
 
 
-@import "./css/media-queries.css";
 @import "./css/portfolio.css";
 @import "./css/birds.css";
 @import "./css/contact-form.css";
@@ -73,7 +72,6 @@ ul {
 /* CONTAINER AND BLOCK  */
 
 
-
 .container {
     text-align: center;
     width: 100%;
@@ -94,7 +92,7 @@ ul {
 }
 
 .title {
-    font-family: open-sans;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
     font-size: 3rem;
     text-align: center;
@@ -105,7 +103,6 @@ ul {
 .space {
     width: 2rem;
 }
-
 
 
 
@@ -124,7 +121,6 @@ labtop -- width: 1280px height: 800px
 home -- width: 2048px height: 1152px
 larger -- 2560px 
 */
-
 
 
 

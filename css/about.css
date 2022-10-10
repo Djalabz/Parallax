@@ -1,11 +1,13 @@
 #about {
     max-width: 860px;
     margin-bottom: 4rem;
+    height: 140vh;
 }
 
 #about .name {
     margin-top: 0;
     font-size: 2rem;
+    font-weight: bolder;
 }
 
 #about .left {
@@ -39,7 +41,7 @@
 .resume {
     margin-top: 1rem;
     border: solid 1px white;
-    border-radius: 6px;
+    border-radius: 10px;
     width: 12rem;
     height: 1.5rem;
     text-align: center;
@@ -54,14 +56,46 @@
 
 #about .bottom {
     width: 100%;
-    padding-top: 1rem;
+    padding-top: 2rem;
     margin-top: 2rem;
     border-top: solid 2px white;
-    grid-area: 2 / 1 / 2 / 2;
+    grid-area: 2 / 1 / 2 / 3;
     height: 100px;
+    display: flex;
 }
 
-#skillsChart {
-    width: 100%;
+
+
+.skills li {
+    display: flex;
+    align-items: center;
+    height: 1.8rem;
 }
+
+.skills li p {
+    margin: 0;
+    width: 7rem;
+}
+
+.bar {
+    width: 15rem;
+    height: 0.6rem;
+    background-color: lightgrey;
+    opacity: 0.6;
+    z-index: 0;
+    border-radius: 20px;
+}
+
+.bar.level {
+    width: 13rem;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    left: 9.5rem;
+}
+
+.skills.right .level {
+    left: 35.5rem;
+}
+
 

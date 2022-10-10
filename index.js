@@ -15,11 +15,12 @@ const titleMain = document.getElementById('title-main')
 const titlePortfolio = document.getElementsByClassName('title portfolio')[0]
 
 
-new Vivus('title-main', {type: 'delayed', duration: 90},
+const titleAnim = new Vivus('title-main', {type: 'delayed', duration: 90},
     function (obj) {
         obj.el.classList.add("finished")
     }
 )
+
 
 function parallaxScroll() {
 
@@ -31,7 +32,7 @@ function parallaxScroll() {
 
     // let unitHeight = innerHeight/100;
     
-    tree1.style.marginTop = - offset + 'px';
+    tree1.style.marginTop = -offset + 'px';
     treeMobile.style.marginTop = -(offset/8) + 'vh';
 
     titleMain.style.display = 'none';
@@ -41,8 +42,6 @@ function parallaxScroll() {
     }
 
     moon.style.display = 'none';
-
-    // if ((unitHeight*70) > offset)
 
     if (offset < 500) {
             
@@ -62,7 +61,7 @@ function parallaxScroll() {
         mountain2.style.bottom = offset * 0.35 + 'px';
         mountain3.style.bottom = offset * 0.25 + 'px';
         mountain4.style.bottom = offset * 0.2 + 'px';
-        
+
         moon.style.marginTop = offset/8 + 'px';
 
         birds.style.marginTop = offset/2 + 'px';
@@ -226,46 +225,3 @@ form.onsubmit = (e) => {
   xhr.send(formData);
 }
 
-
-
-
-
-//// SKILLS CHART using Chart JS /////
-
-
-const labels = ['HTML', 'CSS', 'JS', 'REACT', 'PHP', 'SQL', 'WORDPRESS'];
-
-
-const data = {
-    labels: labels,
-    datasets: [{
-      label: 'Skills so far',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
-      data: [83, 75, 71, 65, 65, 70, 75],
-      max: 100,
-    }]
-  };
-
-
-const config = {
-    type: 'bar',
-    data: data,
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          position: 'top',
-        },
-        title: {
-          display: true,
-          text: 'Chart.js Bar Chart'
-        }
-      }
-    },
-  };
-
-  const skillsChart = new Chart(
-    document.getElementById('skillsChart'),
-    config
-  );
