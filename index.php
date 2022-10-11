@@ -98,6 +98,9 @@
                 </div>
 
             </section>
+            
+
+            <div class="spacer layer-home"></div>
 
 
             <section id="about" class="container">

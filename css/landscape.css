@@ -1,10 +1,13 @@
 
 /* //// LANDSCAPE //// */
 
-#home {
-    height: 160vh;
-}
 
+#home {
+    /* background: linear-gradient(.5turn,rgb(253, 85, 63), rgb(247 149 69), var(--happy-blue)); */
+    background: linear-gradient(.5turn,#ee4c3e, rgb(255, 139, 44), var(--happy-blue));
+    height: 110vh;
+    margin: 0;
+}
 
 #title-main {
     stroke-linecap: square;
@@ -59,6 +62,7 @@
     width: 112vw;
     left: -1em;
     top: 64vh;
+    z-index: 2;
 }
 
 .trees-mobile {
@@ -70,6 +74,7 @@
     left: 0;
     bottom: 0;
     height: 40vh;
+    z-index: 1;
 }
 
 #m2 {
@@ -77,6 +82,7 @@
     left:-20rem;
     bottom: 0;
     height: 36vh;
+    z-index: 0;
 }
 
 #m3 {
@@ -90,8 +96,8 @@
 #m4 {
     width: 140vw;
     left:0;
-    bottom: 0;
     height: 45vh;
+    z-index: -1;
 }
 
 .moon-light {
@@ -107,11 +113,9 @@
     border-radius: 100%;
     position: fixed;
     right: 20%;
-    z-index: -99;
+    z-index: 0;
     top: 20vh;
 }
-
-
 
 
 /* CLOUDS  */
@@ -120,7 +124,7 @@
 
 .cloud {
     position: fixed;
-    z-index: -98;
+    z-index: 0;
 }
 
 .cloud.left1 {
@@ -150,6 +154,17 @@
     right: -20px;
     width: 17vw;
     top:7rem;
+}
+
+.spacer {
+    height: 140vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover ;
+}
+
+.layer-home {
+    background-image: url('../assets/SVG/layered-blue.svg');
 }
 
 

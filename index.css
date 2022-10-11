@@ -10,6 +10,16 @@
 @import "./css/about.css";
 
 
+/* // COLORS // */
+
+:root {
+    --deep-blue: #190f40;
+    --happy-blue: #65C7EB;
+    --about-purple: #5034be;
+}
+
+
+
 /* // FONTS // */
 
 
@@ -48,12 +58,14 @@ html {
 }
 
 body {
-    background: linear-gradient(.5turn,#FD553F, #6F489E, #65C7EB);
+    /* background: linear-gradient(.5turn,rgb(253, 85, 63), rgb(247 149 69)); */
+    /* background-color: var(--deep-blue); */
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
     color: white;
     font-family: open-sans;
+    overflow-x: hidden;
 }
 
 .main {

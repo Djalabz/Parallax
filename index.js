@@ -1,6 +1,7 @@
 //// PARALLAX // MAIN TITLE VIVUS DRAWING ANIMATION ////
 
 
+const home = document.getElementById('home')
 const tree1 = document.getElementsByClassName('trees-1')[0]
 const treeMobile = document.getElementsByClassName('trees-mobile')[0]
 const mountain1 = document.getElementById('m1')
@@ -72,19 +73,17 @@ function parallaxScroll() {
         clouds[3].style.right = -14-(offset/1.3) + 'px' ;
         clouds[4].style.right = -20-(offset) + 'px' ;
     
-    }  else if (offset > 850) {
+    }  else if (offset > 800) {
 
         titlePortfolio.style.opacity = '1';
         titlePortfolio.classList.add('animate__animated', 'animate__fadeInDown')
         titlePortfolio.style.setProperty('--animate-duration', '2.5s')
         titlePortfolio.style.animationFillMode = 'forwards';
-
     }
 }
 
 
 document.addEventListener('scroll', parallaxScroll);
-
 
 
 
@@ -225,3 +224,6 @@ form.onsubmit = (e) => {
   xhr.send(formData);
 }
 
+
+
+/// ABOUT SKILLS CHART ///
