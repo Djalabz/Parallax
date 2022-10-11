@@ -1,5 +1,5 @@
 #about {
-    height: 120vh;
+    height: 100vh;
     background-color: #4c399a;
     margin-top: 0;
     margin-bottom: 0;
@@ -27,7 +27,7 @@
 }
 
 #about .content {
-    max-width: 900px;
+    max-width: 860px;
     margin: 4rem auto 4rem auto;
     padding: 2.5rem;
     display: grid;

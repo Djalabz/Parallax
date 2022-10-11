@@ -1,5 +1,9 @@
 /* ////// Contact FORM //////  */
 
+#contact {
+    background-color: #0381a3;
+    margin: 0 auto;
+}
 
 .contact-form {
     display: grid;

@@ -2,7 +2,11 @@
 
 
 
-
+#portfolio {
+    background-color: var(--sky-salmon);
+    margin: 0 auto;
+    padding-top: 4rem;
+}
 
 
 .card {

@@ -1,5 +1,9 @@
 /* ////// FOOTER ////// */
 
+.footer {
+    background-color: #0381a3;
+    margin: 0 auto;
+}
 
 .copyright {
     margin-top: 5rem;

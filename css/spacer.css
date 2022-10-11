@@ -13,3 +13,8 @@
     height: 60vh;
     background-image: url('../assets/SVG/wave-to-portfolio-complex.svg');
 }
+
+.layer-portfolio-contact {
+    background-image: url('../assets/SVG/waves-to-contact.svg');
+    height: 40vh;
+}

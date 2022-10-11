@@ -170,8 +170,6 @@ larger -- 2560px
         0% {opacity: 1; margin-left: 2.2rem;}
         60% {opacity: 20%;}
         100% {opacity: 0; margin-left: 0rem;}
-    
-    
     }
 
     .title {
@@ -256,6 +254,13 @@ larger -- 2560px
         animation-name: fly-right-two;
     }
 
+    #about {
+        max-width: 340px;
+    }
+
+    #about .bottom {
+        display: block;
+    }
 
 }
 
@@ -287,16 +292,23 @@ larger -- 2560px
 
 @media (min-width: 768px) and (max-width: 1279px) {
 
-    .trees-mobile {
+
+
+    /* .trees-mobile {
         display: block;
         left: -1em;
         width: 140vw;
         top: 62vh;
-    }
+    } */
 
     .trees-1 {
-        display: none;
+        top:72vh;
+    } 
+
+    .spacer.layer-home-about {
+        margin-top: -12rem;
     }
+    /*
 
     #m1 {
         height: 50vh;
@@ -317,7 +329,7 @@ larger -- 2560px
 
     .moon {
         top: 20vh;
-    }
+    } */
 }
 
 
