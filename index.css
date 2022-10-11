@@ -8,6 +8,7 @@
 @import "./css/footer.css";
 @import "./css/landscape.css";
 @import "./css/about.css";
+@import "./css/spacer.css";
 
 
 /* // COLORS // */
@@ -16,6 +17,8 @@
     --deep-blue: #190f40;
     --happy-blue: #65C7EB;
     --about-purple: #5034be;
+    --sky-salmon: #FF6F61;
+    --red-salmon: #ff5849;
 }
 
 

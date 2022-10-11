@@ -3,7 +3,6 @@
 
 .header {
     width: 100%;
-
     position: fixed;
     top:0;
     z-index: 99;
@@ -48,7 +47,7 @@
     left: 3rem;
     border-radius: 100%;
     border: solid 4px white;
-    background-color: darkred;
+    background-color: #ca2c1e;
     cursor: pointer;
     z-index: 99;
 }

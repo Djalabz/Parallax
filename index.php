@@ -98,9 +98,9 @@
                 </div>
 
             </section>
-            
 
-            <div class="spacer layer-home"></div>
+
+            <div class="spacer layer-home-about"></div>
 
 
             <section id="about" class="container">
@@ -165,6 +165,9 @@
                     </div>
                 </div>
             </section>
+
+
+            <div class="spacer layer-about-portfolio"></div>
             
 
             <section id="portfolio" class="container">

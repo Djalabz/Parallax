@@ -1,7 +1,8 @@
 #about {
-    height: 140vh;
+    height: 120vh;
     background-color: #4c399a;
     margin-top: 0;
+    margin-bottom: 0;
 }
 
 #about .name {
