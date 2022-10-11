@@ -4,7 +4,7 @@
 
 #home {
     /* background: linear-gradient(.5turn,rgb(253, 85, 63), rgb(247 149 69), var(--happy-blue)); */
-    background: linear-gradient(.5turn,#ee4c3e, rgb(255, 139, 44), var(--happy-blue));
+    background: linear-gradient(.5turn,#ee4c3e, rgb(252, 131, 33), var(--happy-blue));
     height: 110vh;
     margin: 0;
 }
